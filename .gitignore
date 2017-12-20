@@ -1,0 +1,47 @@
+# -----------------------------------------------------------------
+# Bare Minimum Git Cheatsheet
+# http://ironco.de/bare-minimum-git/
+# ver 20140411
+# -----------------------------------------------------------------
+
+# initialize a git repo
+git init
+
+# add .gitignore file into project root
+# the first line is for a WordPress project
+# the second line is for a general web project
+curl -O https://gist.githubusercontent.com/salcode/9940509/raw/.gitignore
+# curl -O https://gist.githubusercontent.com/salcode/10017553/raw/.gitignore
+
+# add all new or changed files
+# (put them in the envelope)
+git add -A
+
+git status
+
+# commit your changes with a label
+# (seal the envelope)
+git commit -m 'fix misspelled name'
+
+git status
+
+# pull changes from the shared repo
+git pull --rebase
+
+git status
+
+# push your changes to the shared repo
+# (send the envelopes)
+git push
+
+###########################################
+# Conflicts look like below               #
+# fix them and remove the indicator lines #
+# git add -A, git commit                  #
+###########################################
+
+<<<<<<<<<
+(your version here)
+=========
+(server version here)
+>>>>>>>>>
